@@ -23,7 +23,7 @@ public class ClienteController {
         return clienteService.listarClientes();
     }
     //Post
-    @PutMapping("/criar")
+    @PostMapping("/criar")
     public ResponseEntity<ClienteModel> criar (@RequestBody ClienteModel cliente){
         ClienteModel novo = clienteService.criarCliente(cliente);
         return ResponseEntity.status(201).body(novo);
